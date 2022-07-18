@@ -1,4 +1,4 @@
-# Sitecore Mini CRM installation guide  
+# Sitecore Mini CRM Installation Guide  
 ## Prerequisites  
 1.	Sitecore 10.2 – it is possible the mini CRM will work with earlier versions, but it has not been tested.
 2.	Sitecore Forms
@@ -24,4 +24,23 @@ Update-Package -reinstall
 11.	Open the page created in the previous step using Experience editor and insert an **MVC Form** rendering with data source /sitecore/Forms/Add CRM Contact (installed by the package file).
 12.	Edit the form located at /sitecore/Forms/Add CRM Contact and update the redirect action to the page item created in step 5 above.
 13.	Your mini CRM should now be ready to use.
+  
 
+# Sitecore Mini CRM User Guide  
+## Adding contacts  
+1.	To add new contacts ensure you are viewing the listing page from either experience editor in preview mode or from the published site and click the green button at the top center with text which was defined during installation.
+2.	Enter the contact values and click **Save Contact**.
+
+## Searching  
+From the list page, enter at least 3 characters into the search field at the top left. The search is automatically performed on all fields as you type.
+
+## Update existing contact  
+1.	From within Content Editor, navigate to the **CRM Contacts Folder**.
+2.	Locate the desired content in the folder and select it.
+3.	Update desired field(s).
+4.	Click **Save**.
+
+## Delete existing contact  
+1.	From within Content Editor, navigate to the CRM Contacts Folder.
+2.	Locate the desired content in the folder and select it.
+3.	Click **Delete**.
