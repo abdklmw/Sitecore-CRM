@@ -13,7 +13,7 @@ Update-Package -reinstall
 3.	Build and deploy to your Sitecore 10.2 instance.
 4.	Install the supplied Sitecore Items package from the root of the repo, “Sitecore Mini CRM Items.zip”.  
   
-For your convenience, a layout has been supplied which can be used to quickly get the CRM up and running. It is recommended that you edit your own placeholders to allow the addition of the “SitecoreCRM Contacts Folder” rendering where desired.  
+> For your convenience, a layout has been supplied which can be used to quickly get the CRM up and running. It is recommended that you edit your own placeholders to allow the addition of the “SitecoreCRM Contacts Folder” rendering where desired.  
   
 5.	Create an item in the content tree based on the template: /sitecore/templates/Project/Sitecore CRM/CRM Page
 6.	Create a sub item of that new page based on the template: /sitecore/templates/Project/Sitecore CRM/CRM Contacts Folder (note, this item is not required to be under the CRM Page, but is suggested).
