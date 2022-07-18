@@ -21,5 +21,7 @@ Update-Package -reinstall
 8.	Using Experience editor, open the page created in the previous step and insert a **SitecoreCRM** rendering and set the data source to the same created in step 6 above.
 9.	In roughly the center of the component, you should see **[No text in field]**, click here and link to the page you created in step 9 above; be sure to enter a **Link Description** which will be the text that will be displayed on the button.
 10.	Create a page based on the template: /sitecore/templates/Project/Sitecore CRM/CRM Add Contact Page
-11.	Open the page created in the previous step using Experience editor and insert an MVC Form rendering with data source /sitecore/Forms/Add CRM Contact (installed by the package file).
-12.	Your mini CRM should now be ready to use.
+11.	Open the page created in the previous step using Experience editor and insert an **MVC Form** rendering with data source /sitecore/Forms/Add CRM Contact (installed by the package file).
+12.	Edit the form located at /sitecore/Forms/Add CRM Contact and update the redirect action to the page item created in step 5 above.
+13.	Your mini CRM should now be ready to use.
+
