@@ -1,0 +1,20 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.ExperienceForms.Mvc.Html
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/SitecoreCRM.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @Html.Sitecore().DynamicPlaceholder("content", 1)
+    </div>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    @Html.RenderFormStyles()
+    @Html.RenderFormScripts()
+</body>
+</html>

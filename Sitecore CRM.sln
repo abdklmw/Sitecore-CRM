@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{49FF8E55-6CE1-42B7-BC83-97E7C58980DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Feature.SitecoreCRM", "Code\Project.Feature.SitecoreCRM.csproj", "{463990DC-C940-4CD9-830D-33196B8FD984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{463990DC-C940-4CD9-830D-33196B8FD984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463990DC-C940-4CD9-830D-33196B8FD984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463990DC-C940-4CD9-830D-33196B8FD984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463990DC-C940-4CD9-830D-33196B8FD984}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{463990DC-C940-4CD9-830D-33196B8FD984} = {49FF8E55-6CE1-42B7-BC83-97E7C58980DC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+		SolutionGuid = {10A7405E-A44F-4045-B7C6-09B262EE4CE5}
+	EndGlobalSection
+EndGlobal

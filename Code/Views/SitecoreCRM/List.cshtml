@@ -1,0 +1,92 @@
+﻿@using Project.Feature.SitecoreCRM.Models
+@using Sitecore.Data.Fields
+@using Sitecore.Mvc
+@model CRMContactList
+
+@{
+    Layout = null;
+}
+<div class="container" style="padding: 25px 0px;">
+    <div class="row">
+        <div class="col">
+            <div id="searchfield"><input type="text" id="srchString" name="srchString" placeholder="Search"></div>
+            <div id="results" class="alert alert-info" style="display: none;"></div>
+        </div>
+        <div class="col">
+            @Html.Sitecore().Field("Add Contact Link", Model.DataSource, new { @class = "btn btn-success" })
+        </div>
+    </div>
+</div>
+<div class="container sitecoreCrmList">
+    <div class="row headerRow">
+        <div class="col">
+            Name
+        </div>
+        <div class="col">
+            Email
+        </div>
+        <div class="col">
+            Phone
+        </div>
+        <div class="col">
+            Address
+        </div>
+    </div>
+    @foreach (CRMContact contact in Model.Contacts)
+    {
+        Html.RenderPartial("View", contact);
+    }
+</div>
+
+<script>
+    jQuery(document).ready(
+        function ($) {
+            $("#srchString").keyup(
+                function () {
+                    //get search string and convert to lowercase for case insensitive search
+                    var srchString = $(this).val().toLowerCase();
+                    if (srchString.length > 2) {
+                        var cnt = 0;
+                        $('[data-contact]').each(function (results) {
+                            if (results.length !== 0) {
+                                let thisContact = $(this).data('contact').toString().toLowerCase();
+                                //at least one record was found
+                                if (thisContact.indexOf(srchString) < 0) {
+                                    //hide this game since it does not contain the text which was searched for
+                                    $(this).hide();
+                                }
+                                else {
+                                    // update the count
+                                    cnt++;
+
+                                    //show this contact since it contains text which was searched for
+                                    $(this).show();
+                                }
+                            }
+                            else {
+                                //no contact found
+                            }
+                        });
+                        $("#results").text(`${cnt} contacts found.`);
+                        $("#results").show();
+
+                    }
+                    else {
+                        $('*[data-contact]').each(function (results) {
+                            $(this).show();
+                        });
+                        $("#results").text("Enter at least 3 characters to initiate search.");
+                        $("#results").show();
+                    }
+                }
+            );
+            $("#srchString").blur(
+                function () {
+                    if ($("#srchString").val() == "") {
+                        $("#results").hide();
+                    }
+                }
+            );
+        }
+    );
+</script>

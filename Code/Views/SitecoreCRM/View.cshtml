@@ -1,0 +1,41 @@
+﻿@using Project.Feature.SitecoreCRM.Models
+@model CRMContact
+@{
+    var lastName = Model.LastName;
+    var firstName = Model.FirstName;
+    var email = Model.Email;
+    var phone = Model.Phone;
+    var address = Model.Address;
+}
+
+<div class="row sitecoreCrmContact"
+     data-contact="@lastName, @firstName @email @phone @address">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @lastName, @firstName
+            </div>
+            <div class="col">
+                @if (!String.IsNullOrWhiteSpace(email))
+                {
+                    <a href="mailto:@(email)">
+                        @email
+                    </a>
+                }
+            </div>
+            <div class="col">
+                @if (!String.IsNullOrWhiteSpace(phone))
+                {
+                    <a href="tel:@(phone)">
+                        @phone
+                    </a>
+                }
+            </div>
+            <div class="col">
+                @address
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+</p>
